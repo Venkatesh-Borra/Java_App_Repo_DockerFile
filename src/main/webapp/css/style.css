@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --ink: #1e1a17;
+    --muted: #6f6259;
+    --paper: #f7f1e7;
+    --cream: #fffaf1;
+    --gold: #b77a22;
+    --line: #dfd3c1;
+    --dark: #191512;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.75;
+}
+
+.hero {
+    min-height: 92vh;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(15,10,7,.82), rgba(15,10,7,.35)),
+        url('https://commons.wikimedia.org/wiki/Special:FilePath/16th_century_Kodandarama_temple,_Vontimitta,_Andhra_Pradesh_India_-_31.jpg')
+        center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 6vw;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.brand {
+    font-family: Cinzel, serif;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.navlinks { display: flex; gap: 24px; flex-wrap: wrap; }
+.navlinks a { color: white; text-decoration: none; font-size: .9rem; opacity: .9; }
+
+.hero-content {
+    width: min(900px, 88vw);
+    margin: auto;
+    padding: 80px 0;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .76rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.hero .eyebrow { color: #f4cc7d; }
+
+h1, h2, h3 {
+    font-family: Cinzel, Georgia, serif;
+    line-height: 1.2;
+}
+
+h1 { font-size: clamp(4rem, 10vw, 8rem); margin: 10px 0; }
+h2 { font-size: clamp(2.1rem, 4vw, 4rem); margin: 10px 0 30px; }
+h3 { font-size: 1.35rem; }
+
+.hero-subtitle {
+    font-family: Cinzel, Georgia, serif;
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+}
+
+.hero-text { max-width: 650px; font-size: 1.08rem; }
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 22px;
+    border: 1px solid #f4cc7d;
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.section {
+    width: min(1150px, 88vw);
+    margin: auto;
+    padding: 100px 0;
+}
+
+.intro, .two-col, .festival {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.fact-card, .festival-card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(80,55,25,.08);
+}
+
+.fact-card div {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+.fact-card div:last-child { border-bottom: 0; }
+.fact-card span { display:block; color: var(--muted); font-size:.8rem; text-transform:uppercase; letter-spacing:1px; }
+.fact-card strong { display:block; margin-top:4px; }
+
+.dark-section {
+    width: 100%;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    background: var(--dark);
+    color: #f7efe3;
+}
+
+.dark-section > * { max-width: 1150px; margin-left:auto; margin-right:auto; }
+
+.timeline {
+    border-left: 1px solid #806a52;
+    margin-top: 50px;
+}
+
+.timeline article {
+    position: relative;
+    padding: 0 0 50px 42px;
+}
+
+.timeline article::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    position: absolute;
+    left: -6px;
+    top: 8px;
+}
+
+.year {
+    color: #e4bd7b;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.note {
+    border-left: 4px solid var(--gold);
+    background: #efe5d5;
+    padding: 18px 22px;
+    margin-top: 25px;
+}
+
+.rounded-image {
+    width: 100%;
+    max-height: 620px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+figure { margin: 0; background: var(--cream); border: 1px solid var(--line); }
+figure img { width: 100%; height: 350px; object-fit: cover; display:block; }
+figcaption { padding: 14px 16px; color: var(--muted); font-size: .9rem; }
+
+.architecture-grid, .people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.architecture-grid > div, .people-grid article {
+    padding: 28px;
+    border: 1px solid var(--line);
+    background: var(--cream);
+}
+
+.dark-section .people-grid article {
+    background: #231e1a;
+    border-color: #4b4035;
+}
+
+.festival-card {
+    text-align: center;
+    padding: 55px 30px;
+}
+
+.festival-icon { font-size: 4rem; font-family: Georgia, serif; color: var(--gold); }
+
+.quote {
+    font-family: Cinzel, Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2.3rem);
+    line-height: 1.5;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 45px 0;
+    margin-bottom: 45px;
+}
+
+.sources a { color: #80551a; }
+.small { font-size: .82rem; color: var(--muted); }
+
+footer {
+    text-align:center;
+    padding: 35px 20px;
+    background: #120f0d;
+    color: #cfc2b4;
+    font-size: .85rem;
+}
+
+@media (max-width: 800px) {
+    .nav { align-items:flex-start; gap:20px; flex-direction:column; }
+    .intro, .two-col, .festival { grid-template-columns: 1fr; gap: 35px; }
+    .gallery, .architecture-grid, .people-grid { grid-template-columns: 1fr; }
+    .hero { min-height: 85vh; }
+    .hero-content { padding: 40px 0; }
+}
